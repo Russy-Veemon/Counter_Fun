@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+    crossorigin="anonymous">
+    <title>Counter</title>
+</head>
+<body class="text-center bg-dark">
+    <h1 class=" text-center font-weight-bold text-danger ">COUNTER</h1>
+    <h2 class=" text-center text-danger">{{session['count']}} time(s)!</h2>
+    <div class="container">
+        <div class="row text-center d-inline p-2 text-white">
+            <a href="/home" type="button" class="btn btn-primary">Count</a>
+            <a href="/destroy_session" type="button" class="btn btn-danger">Reset</a>
+        </div>
+    </div>
+    <div class="row text-center d-inline p-2 text-white">
+        <a href="/plustwo" type="button" class="btn btn-lg btn-outline-warning">PLUS TWO!</a>
+    </div>
+    <div>
+        <form action="/userplus" method="POST">
+            <input type="text" name="add_this_many" placeholder="Add This Many">
+            <input type="submit" value="Add This To Count">
+        </form>
+    </div>
+</body>
+</html>
